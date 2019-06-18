@@ -2,12 +2,12 @@ class BplansController < ApplicationController
 
   # GET: /bplans
   get "/bplans" do
-    erb :"/bplans/index.html"
+    erb :"/bplans/show_all"
   end
 
   # GET: /bplans/new
   get "/bplans/new" do
-    erb :"/bplans/new.html"
+    erb :"/bplans/new_bplan"
   end
 
   # POST: /bplans
@@ -17,12 +17,12 @@ class BplansController < ApplicationController
 
   # GET: /bplans/5
   get "/bplans/:id" do
-    erb :"/bplans/show.html"
+    erb :"/bplans/show_bplan"
   end
 
   # GET: /bplans/5/edit
   get "/bplans/:id/edit" do
-    erb :"/bplans/edit.html"
+    erb :"/bplans/edit_bplan"
   end
 
   # PATCH: /bplans/5

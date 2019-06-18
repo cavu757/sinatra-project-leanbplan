@@ -10,7 +10,15 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    erb :index
+  end
+
+  get '/error' do
+    erb :"users/error"
+  end
+
+  get '/signup_error' do
+    erb :"users/signup_error"
   end
 
 end
