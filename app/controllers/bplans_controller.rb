@@ -2,6 +2,9 @@ class BplansController < ApplicationController
 
   # GET: /bplans
   get "/bplans" do
+    
+    @user = User.find_by_id(session[:user_id])
+    @bplans = Bplan.all
     erb :"/bplans/show_all"
   end
 
@@ -17,6 +20,8 @@ class BplansController < ApplicationController
 
   # GET: /bplans/5
   get "/bplans/:id" do
+    @user = User.find_by_id(session[:user_id])
+    @bplan = Bplan.find_by_id(params[:id])
     erb :"/bplans/show_bplan"
   end
 

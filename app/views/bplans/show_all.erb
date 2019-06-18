@@ -1,1 +1,29 @@
-<h3>this is the show all bplan page</h3>
+<%redirect "/login" if !Helpers.is_logged_in?(session)%>
+
+<h3> Welcome, <%= @user.username %> </h3>
+
+  <a href="/bplans/new">Create a New Business Plan</a>
+  <br>
+
+  <% if @bplans.empty? %>
+    <h5>There are no business plans in the database</h5>
+  <% else %>
+    <ul>
+
+    <% @bplans.each do |b| %>
+      <br>
+      <li>Problem: <%= b.problem %><br> Solution: <%= b.solution %><a href="/bplans/<%=b.id%>"> View </a></li>
+
+    <% end %>
+    </ul>
+  <% end %>
+
+  <!-- t.text :problem
+  t.text :solution
+  t.text :key_metrics
+  t.text :cost_structure
+  t.text :unique_value_proposition
+  t.text :unfair_advantage
+  t.text :channels
+  t.text :customer_segments
+  t.text :revenue_streams -->

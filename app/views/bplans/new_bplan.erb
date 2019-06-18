@@ -1,1 +1,36 @@
-<h3>this is the new bplan page</h3>
+<%redirect "/login" if !Helpers.is_logged_in?(session)%>
+
+  <form action='/bplans' method="post">
+    Problem:
+    <input type="text" name="problem"><br>
+    Solution:
+    <input type="text" name="solution"><br>
+    Key Metrics:
+    <input type="text" name="key_metrics"><br>
+    Cost Structure:
+    <input type="text" name="cost_structure"><br>
+    Unique Value Proposition:
+    <input type="text" name="unique_value_proposition"><br>
+    Unfair Advantage:
+    <input type="text" name="unfair_advantage"><br>
+    Channels:
+    <input type="text" name="channels"><br>
+    Customer Segments:
+    <input type="text" name="customer_segments"><br>
+    Revenue Streams:
+    <input type="text" name="revenue_streams"><br>
+
+    Create Your Business Plan
+    <input type="submit" name="submit" id="submit">
+
+  </form>
+
+  <!-- t.text :problem
+  t.text :solution
+  t.text :key_metrics
+  t.text :cost_structure
+  t.text :unique_value_proposition
+  t.text :unfair_advantage
+  t.text :channels
+  t.text :customer_segments
+  t.text :revenue_streams -->

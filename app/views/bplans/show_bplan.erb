@@ -1,1 +1,33 @@
-<h3>this is the show one bplan</h3>
+<%redirect "/login" if !Helpers.is_logged_in?(session)%>
+
+<div class="">
+
+  <h4>Problem:</h4>
+  <p><%= @bplan.problem %></p>
+
+  <h4>Solution:</h4>
+  <p><%= @bplan.solution %></p>
+
+  <h4>Key Metrics:</h4>
+  <p><%= @bplan.key_metrics %></p>
+
+  <h4>Cost Structure:</h4>
+  <p><%= @bplan.cost_structure %></p>
+
+  <h4>Unique Value Proposition:</h4>
+  <p><%= @bplan.unique_value_proposition %></p>
+
+  <h4>Unfair Advantage:</h4>
+  <p><%= @bplan.unfair_advantage %></p>
+
+  <h4>Channels:</h4>
+  <p><%= @bplan.channels %></p>
+
+  <h4>Customer Segments:</h4>
+  <p><%= @bplan.customer_segments %></p>
+
+  <h4>Revenue Streams:</h4>
+  <p><%= @bplan.revenue_streams %></p>
+  
+
+</div>

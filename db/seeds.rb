@@ -1,6 +1,4 @@
-user1 = User.create(username: "cavu757", email: "admin@cavu757.com" password: "flymore")
 
-user2 = User.create(username: "coding757", email: "admin@coding757.com", password: "codemore")
 
 bplan1 = Bplan.create(
   problem: "No coding school in 757",
