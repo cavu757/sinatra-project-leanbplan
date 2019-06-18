@@ -10,6 +10,7 @@ class CreateBplans < ActiveRecord::Migration
       t.text :channels
       t.text :customer_segments
       t.text :revenue_streams
+      t.integer :user_id
       t.timestamps null: false
     end
   end
