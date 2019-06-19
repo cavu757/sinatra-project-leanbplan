@@ -36,11 +36,6 @@ class UsersController < ApplicationController
     end
   end
 
-  get "/users/:username" do
-    @user = User.find_by(username: params[:username])
-    erb :"bplans/show_all"
-  end
-
   get '/logout' do
     erb :"users/logout"
   end
