@@ -21,4 +21,8 @@ class ApplicationController < Sinatra::Base
     erb :"users/signup_error"
   end
 
+  not_found do
+    status 404
+    erb :"/404"
+  end
 end

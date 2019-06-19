@@ -38,7 +38,11 @@ class BplansController < ApplicationController
   get "/bplans/:id" do
     @user = User.find_by_id(session[:user_id])
     @bplan = Bplan.find_by_id(params[:id])
-    erb :"/bplans/show_bplan"
+    if !!@bplan
+      erb :"/bplans/show_bplan"
+    else
+      erb :"/404"
+    end
   end
 
   # GET: /bplans/5/edit
@@ -79,5 +83,10 @@ class BplansController < ApplicationController
       @bplan.delete
     end
     redirect "/bplans"
+  end
+
+  not_found do
+    status 404
+    erb :"/404"
   end
 end
