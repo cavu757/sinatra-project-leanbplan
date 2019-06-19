@@ -45,7 +45,11 @@ class BplansController < ApplicationController
   get "/bplans/:id/edit" do
     @user = User.find_by_id(session[:user_id])
     @bplan = Bplan.find_by_id(params[:id])
-    erb :"/bplans/edit_bplan"
+    if !!@bplan
+      erb :"/bplans/edit_bplan"
+    else
+      erb :"/404"
+    end
   end
 
   # PATCH: /bplans/5
