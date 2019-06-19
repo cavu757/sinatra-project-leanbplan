@@ -32,10 +32,10 @@
   <p><%= @bplan.revenue_streams %></p>
 
   <%if @bplan.user_id == session[:user_id]%>
-    <h4><a href="/bplans/<%=@bplan.id%>/edit">EDIT PLAN</a></h4><br>
+    <h4><a href="/bplans/<%=@bplan.id%>/edit">Click here to Edit Plan</a></h4><br>
     <form action="/bplans/<%= @bplan.id %>/delete" method="post">
       <input id="hidden" type="hidden" name="_method" value="delete">
-      <input type="submit" value="DELETE PLAN">
+      <input type="submit" value="DELETE PLAN"> (WARNING: This cannot be undone)
     </form>
   <%end%>
 

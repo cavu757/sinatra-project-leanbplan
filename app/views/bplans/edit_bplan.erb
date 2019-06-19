@@ -9,7 +9,7 @@
   value="<%= @bplan.problem %>"
   ></p>
   <h4>Solution:</h4>
-  <p><input type="text" name="solution" style="width:500px;" 
+  <p><input type="text" name="solution" style="width:500px;"
   value="<%= @bplan.solution %>"
   ></p>
   <h4>Key Metrics:</h4>
@@ -39,5 +39,5 @@
   <p><input type="text" name="revenue_streams" style="width:500px;"
   value="<%= @bplan.revenue_streams %>"></p>
 
-  <input type="submit" value="EDIT PLAN">
+  <input type="submit" value="EDIT PLAN"> or <a href="/bplans/<%=@bplan.id%>">Cancel</a>
 </form>
