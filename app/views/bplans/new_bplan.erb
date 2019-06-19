@@ -1,26 +1,27 @@
 <%redirect "/login" if !Helpers.is_logged_in?(session)%>
-  
+  <br>
+  <p>(NOTE: Problem statement and proposed solution are MANDATORY)</p>
 
   <form action='/bplans' method="post">
-    Problem:
+    <h4>Problem:</h4>
     <input type="text" name="problem"><br>
-    Solution:
+    <h4>Solution:</h4>
     <input type="text" name="solution"><br>
-    Key Metrics:
+    <h4>Key Metrics:</h4>
     <input type="text" name="key_metrics"><br>
-    Cost Structure:
+    <h4>Cost Structure:</h4>
     <input type="text" name="cost_structure"><br>
-    Unique Value Proposition:
+    <h4>Unique Value Proposition:</h4>
     <input type="text" name="unique_value_proposition"><br>
-    Unfair Advantage:
+    <h4>Unfair Advantage:</h4>
     <input type="text" name="unfair_advantage"><br>
-    Channels:
+    <h4>Channels:</h4>
     <input type="text" name="channels"><br>
-    Customer Segments:
+    <h4>Customer Segments:</h4>
     <input type="text" name="customer_segments"><br>
-    Revenue Streams:
+    <h4>Revenue Streams:</h4>
     <input type="text" name="revenue_streams"><br>
-
+    <br>
     Create Your Business Plan
     <input type="submit" name="submit" id="submit">
 

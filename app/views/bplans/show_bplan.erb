@@ -1,8 +1,8 @@
 <%redirect "/login" if !Helpers.is_logged_in?(session)%>
 
 <div class="">
-
-  <h4><a href="/bplans/<%=@bplan.id%>/edit">EDIT PLAN</a></h4><br>
+  <h4><a href="/bplans">ALL PLANS</a></h4>
+  <br>
 
   <h4>Problem:</h4>
   <p><%= @bplan.problem %></p>
@@ -31,9 +31,12 @@
   <h4>Revenue Streams:</h4>
   <p><%= @bplan.revenue_streams %></p>
 
-  <form action="/bplans/<%= @bplan.id %>/delete" method="post">
-    <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" value="delete">
-  </form>
+  <%if @bplan.user_id == session[:user_id]%>
+    <h4><a href="/bplans/<%=@bplan.id%>/edit">EDIT PLAN</a></h4><br>
+    <form action="/bplans/<%= @bplan.id %>/delete" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="DELETE PLAN">
+    </form>
+  <%end%>
 
 </div>

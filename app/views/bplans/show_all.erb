@@ -13,7 +13,11 @@
 
     <% @bplans.each do |b| %>
       <br>
-      <li>Problem: <%= b.problem %><br> Solution: <%= b.solution %><a href="/bplans/<%=b.id%>"> View </a></li>
+      <li>Problem: <%= b.problem %><br> Solution: <%= b.solution %> <a href="/bplans/<%=b.id%>">View</a>
+      <%if b.user_id == session[:user_id]%>
+        (Can Edit)
+      <%end%>
+      </li>
 
     <% end %>
     </ul>

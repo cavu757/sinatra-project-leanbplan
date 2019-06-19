@@ -2,7 +2,8 @@
 
 <form action="/bplans/<%= @bplan.id %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
-
+  <br>
+  <p>(REMEMBER: Problem statement and proposed solution are MANDATORY)</p>
   <h4>Problem:</h4>
   <p><input type="text" name="problem"
   value="<%= @bplan.problem %>"
