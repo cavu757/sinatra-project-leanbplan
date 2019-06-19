@@ -1,3 +1,42 @@
 <%redirect "/login" if !Helpers.is_logged_in?(session)%>
 
-<h3>this is the edit bplan page</h3>
+<form action="/bplans/<%= @bplan.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <h4>Problem:</h4>
+  <p><input type="text" name="problem"
+  value="<%= @bplan.problem %>"
+  ></p>
+  <h4>Solution:</h4>
+  <p><input type="text" name="solution"
+  value="<%= @bplan.solution %>"
+  ></p>
+  <h4>Key Metrics:</h4>
+  <p><input type="text" name="key_metrics"
+  value="<%= @bplan.key_metrics %>"
+  ></p>
+  <h4>Cost Structure:</h4>
+  <p><input type="text" name="cost_structure"
+  value="<%= @bplan.cost_structure %>"
+  ></p>
+  <h4>Unique Value Proposition:</h4>
+  <p><input type="text" name="unique_value_proposition"
+  value="<%= @bplan.unique_value_proposition %>"</p>
+  <h4>Unfair Advantage:</h4>
+  <p><input type="text" name="unfair_advantage"
+  value="<%= @bplan.unfair_advantage %>"
+  ></p>
+  <h4>Channels:</h4>
+  <p><input type="text" name="channels"
+  value="<%= @bplan.channels %>"
+  ></p>
+  <h4>Customer Segments:</h4>
+  <p><input type="text" name="customer_segments"
+  value="<%= @bplan.customer_segments %>"
+  ></p>
+  <h4>Revenue Streams:</h4>
+  <p><input type="text" name="revenue_streams"
+  value="<%= @bplan.revenue_streams %>"></p>
+
+  <input type="submit" value="EDIT PLAN">
+</form>

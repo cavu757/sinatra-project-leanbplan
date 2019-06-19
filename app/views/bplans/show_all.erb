@@ -1,6 +1,7 @@
 <%redirect "/login" if !Helpers.is_logged_in?(session)%>
 
 <h3> Welcome, <%= @user.username %> </h3>
+<p> Not you, <a href="/logout">Logout</a></p>
 
   <a href="/bplans/new">Create a New Business Plan</a>
   <br>

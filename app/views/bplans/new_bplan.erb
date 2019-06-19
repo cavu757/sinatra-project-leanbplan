@@ -1,4 +1,5 @@
 <%redirect "/login" if !Helpers.is_logged_in?(session)%>
+  
 
   <form action='/bplans' method="post">
     Problem:
@@ -25,12 +26,14 @@
 
   </form>
 
-  <!-- t.text :problem
-  t.text :solution
-  t.text :key_metrics
-  t.text :cost_structure
-  t.text :unique_value_proposition
-  t.text :unfair_advantage
-  t.text :channels
-  t.text :customer_segments
-  t.text :revenue_streams -->
+<!-- @bplan = Bplan.create(
+  problem: params[:problem],
+  solution: params[:solution],
+  key_metrics: params[:key_metrics],
+  cost_structure: params[:cost_structure],
+  unique_value_proposition: params[:unique_value_proposition],
+  unfair_advantage: params[:unfair_advantage],
+  channels: params[:channels],
+  customer_segments: params[:customer_segments],
+  revenue_streams: params[:revenue_streams],
+) -->
