@@ -85,8 +85,4 @@ class BplansController < ApplicationController
     redirect "/bplans"
   end
 
-  not_found do
-    status 404
-    erb :"/404"
-  end
 end
