@@ -4,7 +4,9 @@ This project allows you to store text data for lean business plans.  A user can 
 
 ## Installation
 
-Fork database from https://github.com/cavu757/sinatra-project-leanbplan, `cd` into the directory, `bundle install` all the gems, `rake db:migrate` for the tables.
+Fork database from https://github.com/cavu757/sinatra-project-leanbplan.
+
+In your terminal window, `cd` into the directory, `bundle install` all the gems, `rake db:migrate` for the tables.
 
 Run app by entering `shotgun` in the terminal window.
 
