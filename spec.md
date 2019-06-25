@@ -25,10 +25,11 @@ Not currently implemented for belongs_to model.  Only error message is for User 
 See README.md file.
 
 Confirm
-- [ ] You have a large number of small Git commits
-
-- [ ] Your commit messages are meaningful
-
-- [ ] You made the changes in a commit that relate to the commit message
-
-- [ ] You don't include changes in a commit that aren't related to the commit message
+- [x] You have a large number of small Git commits
+Have a decent amount of commits.  Will need to consciously keep on reminding myself to commit frequently in future projects.
+- [x] Your commit messages are meaningful
+i.e. 'initial commit', 'user controller functionality', 'bplan controller functionality', 'update signup_error'
+- [x] You made the changes in a commit that relate to the commit message
+Commit messages that have more than one feature change have further description of what is changed.  For future projects, will split these commits to have more specific changes and also easier to understand.
+- [x] You don't include changes in a commit that aren't related to the commit message
+Completed by ensuring that the commit message was always related to the commit changes.
